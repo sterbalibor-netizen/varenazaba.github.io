@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272835;
+  font-family: "Inter", sans-serif;
+}
+
+.aplikace {
+  width: min(97vw, 1200px);
+  height: min(88vh, 820px);
+  min-height: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #272835;
+  display: grid;
+  grid-template-columns: 280px 700px 1fr;
+  grid-template-areas: "levySloupecCely boxObrazku pravySloupecCely";
+  gap: 10px;
+}
+
+/* OKNO OBRÁZKU */
+.boxObrazku {
+  grid-area: boxObrazku;
+  background-color: rgba(99, 102, 150, 0.55);
+  box-shadow: 0 4px 15px rgba(0, 0, 0);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#zobrazenyObrazek {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 2px solid #72dfa6;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px #72dfa6;
+}
+
+.zastupny-text {
+  color: #d0d8e6;
+  font-family: serif;
+}
+
+/* LEVÝ SLOUPEC */
+.levySloupecCely {
+  grid-area: levySloupecCely;
+  display: grid;
+  grid-template-rows: 46px 1fr 35px 40px;
+  grid-template-areas:
+    "nadpisLevy"
+    "teloRucniVolby"
+    "oknoZprav"
+    "tlacitkoOpakovat";
+  gap: 10px;
+}
+
+.nadpisLevy {
+  grid-area: nadpisLevy;
+  display: grid;
+  padding: 15px;
+  background-color: rgba(99, 102, 150, 0.55);
+  border-radius: 10px;
+}
+
+.teloRucniVolby {
+  grid-area: teloRucniVolby;
+  display: grid;
+  background-color: rgba(99, 102, 150, 0.55);
+  border-radius: 10px;
+  padding: 5px;
+  grid-template-rows: 1fr 30px;
+  grid-template-areas:
+    "textareaVolby"
+    "tlacitkoVolby";
+  gap: 4px;
+}
+
+.textareaVolby {
+  grid-area: textareaVolby;
+  display: grid;
+  gap: 4px;
+}
+
+.oknoZprav {
+  grid-area: oknoZprav;
+  background-color: rgba(99, 102, 150, 0.55);
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #d0d8e6;
+  font-family: serif;
+  text-align: center;
+}
+
+/* PRAVÝ SLOUPEC */
+.pravySloupecCely {
+  height: 100%;
+  background-color: rgba(99, 102, 150, 0.55);
+  box-shadow: 0 4px 15px rgba(0, 0, 0);
+  grid-area: pravySloupecCely;
+  padding: 5px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 125px 15px 30px 15px 30px 15px 30px 15px 30px 15px 30px 30px;
+  grid-template-areas:
+    "popisPravy"
+    "teloNadpis"
+    "volbaTelo"
+    "barvaVlasy"
+    "volbaVlasyBarva"
+    "uces"
+    "volbaVlasyDelka"
+    "barvaKuze"
+    "volbaKuze"
+    "stylNahoda"
+    "volbaStyl"
+    "tlacitkoVolbyNahoda";
+  gap: 5px;
+}
+
+.popisPravy {
+  grid-area: popisPravy;
+  padding: 10px;
+}
+
+/* PŘIŘAZENÍ OBLASTÍ PRO PRAVÝ SLOUPEC */
+.volbaTelo {
+  grid-area: volbaTelo;
+}
+.volbaVlasyBarva {
+  grid-area: volbaVlasyBarva;
+}
+.volbaVlasyDelka {
+  grid-area: volbaVlasyDelka;
+}
+.volbaKuze {
+  grid-area: volbaKuze;
+}
+.volbaStyl {
+  grid-area: volbaStyl;
+}
+
+.teloNadpis {
+  grid-area: teloNadpis;
+}
+.barvaVlasy {
+  grid-area: barvaVlasy;
+}
+.uces {
+  grid-area: uces;
+}
+.barvaKuze {
+  grid-area: barvaKuze;
+}
+.stylNahoda {
+  grid-area: stylNahoda;
+}
+
+/* SPOLEČNÉ STYLY */
+h4 {
+  display: grid;
+  color: #d0d8e6;
+  font-family: serif;
+  text-align: center;
+}
+
+h5 {
+  display: grid;
+  color: #f8e4c2;
+  font-family: serif;
+  text-align: center;
+}
+
+button {
+  font-family: serif;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.tlacitkoVolby {
+  margin: 0 auto;
+  width: 110px;
+  grid-area: tlacitkoVolby;
+  background: rgba(114, 223, 166, 0.84);
+  border-radius: 10px;
+  border: groove;
+}
+
+.tlacitkoVolbyNahoda {
+  grid-area: tlacitkoVolbyNahoda;
+  margin: 0 auto;
+  width: 110px;
+  background: rgba(114, 223, 166, 0.84);
+  border-radius: 10px;
+  border: groove;
+}
+
+.tlacitkoOpakovane {
+  grid-area: tlacitkoOpakovat;
+  background: rgba(31, 223, 64, 0.84);
+  border-radius: 10px;
+  border: groove;
+}
+
+.tlacitkoVolby:hover,
+.tlacitkoVolbyNahoda:hover {
+  background: rgb(98, 230, 222);
+  border: inset;
+}
+
+.tlacitkoOpakovane:hover {
+  background: rgb(78, 226, 46);
+  border: inset;
+}
+
+option {
+  background: rgb(142, 168, 220);
+  padding-left: 5px;
+}
+
+select {
+  background: rgb(194, 206, 230);
+  border-radius: 4px;
+  padding-left: 5px;
+  font-family: inherit;
+}
+
+textarea {
+  padding: 5px;
+  height: 50px;
+  background: rgb(194, 206, 230);
+  border-radius: 5px;
+  font-family: inherit;
+  resize: none; /* Zabranuje nechtěnému roztahování oken uživatelem */
+}
