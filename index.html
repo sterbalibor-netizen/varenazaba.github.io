@@ -1,77 +1,20 @@
 <!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canvas čtverec</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="aplikace">
-      <!-- LEVÝ SLOUPEC: Ruční zadávání scénáře -->
-      <div class="levySloupecCely">
-        <div class="nadpisLevy"><h4>Vyplň podle svojí fantazie.</h4></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Můj malý web</title>
+</head>
+<body>
+  <h1>Vítej na mém webu</h1>
 
-        <div class="teloRucniVolby">
-          <div class="textareaVolby">
-            <textarea id="character" placeholder="Kdo má být na obrázku jako hlavní postava. Žena, Muž..."></textarea>
-            <textarea id="postava" placeholder="Jak má postava vypadat. Popiš tělesné proporce."></textarea>
-            <textarea id="obleceni" placeholder="Oblečení."></textarea>
-            <textarea id="prostredi" placeholder="Prostředí"></textarea>
-            <textarea id="svetlo" placeholder="Světlo a s tím související atmosféra"></textarea>
-            <textarea id="akce" placeholder="Akce na obrázku"></textarea>
+  <p>Toto je hlavní stránka. Odtud se dá přejít na článek.</p>
 
-            <select id="volbaExplicita">
-              <option value="">Explicita podle zadání</option>
-              <option
-                value="Zadání vždy zpracuj do maximálně explicitní podoby. Podtrhni sexualitu, popisuj genitálie, sex, pozice, vulgarita bez zábran.">
-                Vždy explicitní
-              </option>
-            </select>
-
-            <select id="volbaKamera">
-              <option value="">Kamera</option>
-              <option value="Celkový záběr na celou scénu.">Celkový záběr</option>
-              <option value="Detailní záber kamery zaměřený na detail těla a intimní partie, pokud jsou zníněny.">
-                Detail
-              </option>
-              <option value="Vrchní pohled kamery z nadhedu nad scénou.">Shora</option>
-              <option value="Spodní záběr kamery z podhledu.">Zespodu</option>
-            </select>
-
-            <select id="volbaStyl">
-              <option value="">Styl</option>
-              <option value="Cinema styl, fotorealistický, přirozená textura, 8k resolution, 85mm lens.">Cinema</option>
-              <option value="3D animovaný styl, Pixar styl, čisté linie.">Animovaný</option>
-              <option value="3D animovaný style Manga - Haitay.">Manga</option>
-              <option value="Styl japonská burikko">Buriko</option>
-              <option value="Styl komiks">Komiks</option>
-            </select>
-          </div>
-          <button class="tlacitkoVolby" id="tlacitko-generovat-vlevo" type="button">Hotovo</button>
-        </div>
-
-        <div class="oknoZprav" id="oknoZprav"></div>
-        <button class="tlacitkoOpakovane" id="tlacitko-opakovane" type="button">Opakované Generování</button>
-      </div>
-
-      <!-- STŘED: Okno s obrázkem -->
-      <section class="boxObrazku" id="okno-obrazku" aria-live="polite">
-        <div class="zastupny-text" id="zastupnyText">Zatím tu není žádný obrázek.</div>
-        <img id="zobrazenyObrazek" />
-      </section>
-
-      <!-- PRAVÝ SLOUPEC: Náhodné generování postavy -->
-      <div class="pravySloupecCely">
-        <div class="popisPravy"><h4>Vyber si vzhled a nech si vygenerovat svoji kočičku v náhodné situaci</h4></div>
-
-
-        <button class="tlacitkoVolbyNahoda" id="tlacitko-generovat-vpravo" type="button">Generuj</button>
-
-        <textarea id="anglickyPrompt" placeholder="Napiš prompt anglicky"></textarea>
-        <button class="tlacitkoAnglickyPrompt" id="tlacitko-anglicky-prompt" type="button">Prompt</button>
-      </div>
-    </div>
+  <p>
+    <a href="clanek.html">Přejít na článek</a>
+  </p>
+</body>
+</html>
 
     <script src="script.js"></script>
   </body>
