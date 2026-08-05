@@ -1,17 +1,19 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Můj malý web</title>
-</head>
-<body>
-  <h1>Vítej na mém webu</h1>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Můj web</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <aside class="levy-sloupec">
+            <button onclick="nactiClanek('clanek1.html')">Článek 1</button>
+        </aside>
 
-  <p>Toto je hlavní stránka. Odtud se dá přejít na článek.</p>
-
-  <p>
-    <a href="clanek.html">Přejít na článek</a>
-  </p>
-</body>
+        <main class="textOkno" id="hlavni-obsah">
+            <h1>Vítej</h1>
+            <p>Vyber článek vlevo.</p>
+        </main>
+    </body>
 </html>
